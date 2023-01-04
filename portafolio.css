@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans&display=swap');
+
+:root{
+    --border-radius: 0.4em;
+    --transition: color 0.1s, background-color 02s ease-in-out;
+    --skills-bar-length: 0%;
+    --primary-color: #00D2FA;
+    --secondary-color: #3E484A;
+    --thirdly-color: #FFF;
+    --icon-color: #00D2FA;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: var(--secondary-color);
+}
+
+.text{
+    color: var(--primary-color);
+}
+
+.content-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h2{
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/*NAVBAR*/
+#navbar{
+    display: flex;
+    position: fixed;
+    background-color: rgba(250, 250, 250, 0.3);
+    height: 4vh;
+    width: 100vw;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    
+}
+
+#navbar a:hover{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/*WELCOME*/
+
+#welcome-section{
+    
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    border-top: solid;
+    border-color: var(--primary-color);
+    background-image: linear-gradient( 130deg, rgba(140, 5, 5, 0.500), rgba(173, 11, 11, 0.466) ), url(https://wallpaperaccess.com/full/7225580.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 35vh;
+
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #454646;
+}
+
+#welcome-text{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.card-header{
+    border: none;
+}
+
+.photo-me{
+    max-width: 12rem;
+}
+
+.presentation-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-banner{
+    color: white;
+}
+
+.mi-correo{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.mi-correo:hover{
+    color: var(--thirdly-color);
+}
+
+@keyframes welcome {
+
+    0%   {top:-10px; left: 0px;}
+    100% {top:20px; left: 20px;} 
+}
+
+/*PROFILE*/
+
+.content-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55vh; 
+    margin: 10px;
+    
+}
+
+.div-profile{
+    max-width: 50rem;
+    max-height: 45rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#about-me{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "present-photo"
+    "text-about" ;
+}
+
+#title-about-me{
+    text-align: center;
+}
+
+
+#text-about-me{
+    text-align: justify;
+    margin: 10px;
+    grid-area: text-about;
+    
+}
+
+/*SKILLS*/
+
+.content-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 55vh; 
+    margin: 10px;
+}
+
+.title-skill{
+    grid-area: title;
+}
+
+.skill-html{
+    display: flex;
+    grid-area: html;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-css{
+    display: flex;
+    grid-area: css;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-bootstrap{
+    display: flex;
+    grid-area: bootstrap;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-php{
+    display: flex;
+    grid-area: php;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-js{
+    display: flex;
+    grid-area: js;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-git{
+    display: flex;
+    grid-area: git;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-java{
+    display: flex;
+    grid-area: java;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-sql{
+    display: flex;
+    grid-area: sql;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-laravel{
+    display: flex;
+    grid-area: laravel;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skill-bar, .skill-bar::after{
+    width: 175px;
+    height: 9px;
+    position: relative;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.skill-bar::after{
+    content: "";
+    position: absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    animation: skill-bar-fill 2s ease-out forwards;
+}
+
+.skill-bar-html::after{
+    --skills-bar-length: 70%;
+}
+
+.skill-bar-css::after{
+    --skills-bar-length: 70%;
+}
+
+.skill-bar-bootstrap::after{
+    --skills-bar-length: 50%;
+}
+
+.skill-bar-php::after{
+    --skills-bar-length: 50%;
+}
+
+.skill-bar-js::after{
+    --skills-bar-length: 30%;
+}
+
+.skill-bar-git::after{
+    --skills-bar-length: 50%;
+}
+
+.skill-bar-java::after{
+    --skills-bar-length: 30%;
+}
+
+.skill-bar-sql::after{
+    --skills-bar-length: 50%;
+}
+
+.skill-bar-laravel::after{
+    --skills-bar-length: 70%;
+}
+
+#skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "title title title"
+    "html css bootstrap"
+    "php git js"
+    "java sql laravel"
+}
+.text-skill{
+    padding-top: 1rem;
+    padding-right: 1em;
+}
+
+@keyframes skill-bar-fill {
+    to{
+        transform: translateX(var(--skills-bar-length));
+    }
+}
+
+.grid-skill-profile{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*PROPHECINECY*/
+
+.content-prophecinecy{
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 100%;
+    height: 40vh; 
+    margin: 10px;
+}
+
+.prophecinecy-div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.card-prophecinecy{
+    background-color: rgb(255, 255, 255, 0.1);
+    width: 18rem;
+    border-radius: 1rem;
+    border-top:  2px rgba(255, 255, 255, 0.5) solid;
+    border-left: 2px rgba(255, 255, 255, 0.5) solid;
+}
+.card-title{
+    color: var(--primary-color);
+}
+
+.card-text{
+    color: var(--primary-color);
+}
+
+.text-prophecinecy{
+    justify-content: center;
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.title-prophecinecy{
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/*PROJECTS*/
+
+.content-project{
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 100%;
+    height: 50vh; 
+    margin: 10px;
+}
+
+.project-div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+}
+
+.img-project{
+    width: 18rem;
+    height: 9rem;
+    border: rgba(240, 240, 240, 1) solid;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.colab{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+
+.colab:hover{
+    color: var(--thirdly-color);
+}
+
+/*CONTACT*/
+
+.contact-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.title-contact{
+    text-align: center;
+}
+
+i{
+    color: var(--icon-color);
+}
+
+.link-linkedin{
+    text-decoration: none;
+}
+
+.link-linkedin:hover{
+    color: var(--thirdly-color);
+}
+
+.link-github{
+    text-decoration: none;
+}
+
+.link-github:hover{
+    color: var(--thirdly-color);
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    margin: 20px;
+    color: var(--primary-color);
+
+}
+
+
+/*MEDIA QUERY*/
+
+@media (max-width: 1800px) {
+    .grid-skill-profile{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    .content-profile{
+        height: 60vh;
+    }
+    .content-skills{
+        height: 40vh;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .project-div{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    .content-project{
+        height: fit-content; 
+    }
+
+}
+
+@media (max-width: 1230px) {
+    .project-div{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    .content-project{
+        height: fit-content; 
+    }
+
+    #welcome-section{
+    
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "welcome-text contact-me"
+        "welcome-text contact-me"
+        ;
+    
+    }
+    #welcome-text{
+        grid-area: welcome-text;
+    }
+
+    .presentation-photo{
+        grid-area: present-photo;
+        padding-top: 2.1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-me{
+        grid-area: contact-me;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 5rem;
+
+
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    .content-prophecinecy{
+        height: fit-content;  
+        margin: 10px;
+    }
+    .content-profile{
+        height: fit-content; 
+        margin: 10px;
+    }
+    .content-skills{
+        height: fit-content;  
+        margin: 10px;
+    }
+    
+
+    .prophecinecy-div{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 2rem;
+    }
+
+    .content-footer{
+        height: fit-content; 
+    }
+
+    .content-project{
+        height: fit-content; 
+    }
+
+    .contact-me{
+        grid-area: contact-me;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 5rem;
+
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .photo-me{
+        max-width: 8rem;   
+    }
+
+    #welcome-section{
+        height: fit-content;
+    }
+
+    .content-profile {
+        width: 100%;
+        height: fit-content; 
+        margin: 10px;
+    }
+
+    .div-profile{
+        max-width: 20rem;
+        max-height: 50rem;
+    }
+
+    .content-skills{
+        width: 100%;
+        height: fit-content; 
+        margin: 10px;
+    }
+
+    #skills{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas: "title" "html" "css" "bootstrap" "php" "git" "js" "java" "sql" "laravel";
+    }
+    .content-project{
+        height: fit-content;
+    }
+    .project-div{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 700px){
+    
+    #navbar{
+        flex-direction: column;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .contact-me{
+        margin: 7rem;
+
+    }
+
+}
+
+@media (max-width: 550px){
+
+    .txt-welcome{
+        margin-left: 4rem;
+    }
+
+    .contact-me{
+        margin-left: 5rem;
+    }
+
+    #welcome-text{
+        margin-left: 5rem;
+    }
+}
+
+@media (max-width: 460px){
+
+    #welcome-section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .txt-welcome{
+        font-size: medium;
+    }
+    .title-contact{
+        font-size: medium;
+    }
+    .correo{
+        font-size: medium;
+    }
+    .whatsapp-telefono{
+        font-size: medium;
+    }
+    .linkedin{
+        font-size: medium;    }
+    .github{
+        font-size: medium;    }
+
+}
+
+@media (max-width: 360px){
+    #welcome-section{
+        justify-content:safe;
+        align-items: center;
+    }
+
+    #welcome-text{
+        padding-left: 5rem;
+    }
+    .contact-me{
+        padding-right: 8rem;
+    }
+}
+
+@media (max-height: 700px){
+    #welcome-section{
+        height: fit-content;
+    }
+
+    .content-profile{
+        height: fit-content; 
+        margin: 10px;
+    }
+
+    .content-skills{
+        height: fit-content; 
+        margin: 10px;
+    }
+    .content-prophecinecy{
+        height: fit-content;
+        margin: 10px;
+    }
+    .content-project{
+        height: fit-content;
+        margin: 10px;
+    }
+}
